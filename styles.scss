@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+}
+
+header,
+footer,
+article,
+section,
+aside {
+    color: #fff;
+    font-size: 3em;
+    display: grid;
+    place-content: center;
+
+}
+
+
+header {
+    background-color: #f11;
+    grid-area: header;
+
+}
+
+aside {
+    background-color: blue;
+    grid-area: aside;
+
+}
+
+section {
+    background-color: rgb(29, 207, 29);
+    grid-area: section;
+
+}
+
+article {
+    background-color: rgb(115, 115, 175);
+    grid-area: article;
+
+}
+
+footer {
+    background-color: chocolate;
+    grid-area: footer;
+}
+
+
+main {
+    height: 100vh;
+    display: grid;
+    gap: 10px;
+    // this grid lay out is 4 col x 3 row
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 200px;
+    //grid-template-areas:
+    // "header header header header"
+    //"aside section section article"
+    //"footer footer footer footer"
+    // ;
+    grid-template-areas: 
+    "header header footer article"
+    "header header footer article"
+    "section aside aside article"
+    ;
+
+}
